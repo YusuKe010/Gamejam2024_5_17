@@ -4,6 +4,7 @@ public enum EnemyType
 {
 	Human,
 	Bee,
+	Cloud
 }
 
 public class EnemyAttack : MonoBehaviour
@@ -15,7 +16,14 @@ public class EnemyAttack : MonoBehaviour
 	{
 		if (other.GetComponent<IDamageable>() != null)
 		{
-			other.GetComponent<IDamageable>().AddDamage(_atk, _enemyType);
+			if (_enemyType == EnemyType.Human)
+			{
+				other.GetComponent<IDamageable>().Kill();
+			}
+			else
+			{
+				other.GetComponent<IDamageable>().AddDamage(_atk);
+			}
 		}
 	}
 }

@@ -40,7 +40,7 @@ public class PlayerPollen : MonoBehaviour, IDamageable, IPose
 		transform.localScale = _initiateScale * (_currentHp / _initiateHp);
 	}
 
-	public void AddDamage(float damage, EnemyType enemyType)
+	public void AddDamage(float damage)
 	{
 		if (_currentHp > 0)
 		{

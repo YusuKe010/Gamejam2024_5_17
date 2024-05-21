@@ -1,7 +1,7 @@
 ﻿public interface IDamageable
 {
 	/// <summary>ダメージを与える</summary>
-	void AddDamage(float damage, EnemyType enemyType);
+	void AddDamage(float damage);
 
 	/// <summary>一撃必殺</summary>
 	void Kill();
