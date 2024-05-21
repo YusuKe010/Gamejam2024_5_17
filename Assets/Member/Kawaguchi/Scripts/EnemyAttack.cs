@@ -24,6 +24,7 @@ public class EnemyAttack : MonoBehaviour
 			{
 				other.GetComponent<IDamageable>().AddDamage(_atk);
 			}
+			Destroy(gameObject);
 		}
 	}
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8057989210942414691}
   - component: {fileID: 637999822922442171}
   - component: {fileID: 414476170549841268}
+  - component: {fileID: 1202818491554380675}
   m_Layer: 0
   m_Name: bee
   m_TagString: Untagged
@@ -83,7 +84,7 @@ SpriteRenderer:
   m_Size: {x: 3.68, y: 4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &637999822922442171
@@ -138,3 +139,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2
+--- !u!114 &1202818491554380675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2563646884620749150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3683fe52ede6405091ae4927d537d4b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyType: 1
+  _atk: 1
