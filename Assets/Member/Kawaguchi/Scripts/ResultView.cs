@@ -22,11 +22,14 @@ public class ResultView : MonoBehaviour
 
         for (int i = 0; i < numberOfPersons; i++)
         {
-            var obj = new GameObject($"Cell{i}").AddComponent<Text>();
-            obj.transform.parent = this.transform;
-            obj.text = $"{i + 1}位:{SaveManage.Instance.Data.Score[i].ToString()}ポイント";
+            if (SaveManage.Instance.Data.Score[i] != 0)
+            {
+                var obj = new GameObject($"Cell{i}").AddComponent<Text>();
+                obj.transform.parent = this.transform;
+                obj.text = $"{i + 1}位:{SaveManage.Instance.Data.Score[i].ToString()}ポイント";
 
-            TextSetting(obj);
+                TextSetting(obj);
+            }
         }
     }
 
