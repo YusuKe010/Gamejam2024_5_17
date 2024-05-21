@@ -4,13 +4,13 @@ using UnityEngine;
 namespace name
 {
 	///<summary>summary</summary>
-	public class pollenMove : MonoBehaviour
+	public class pollenMove : MonoBehaviour, IPose
 	{
 		[SerializeField] private float _moveSpeed = 3f;
 
 		private float _h;
 		private float _v;
-
+		private bool _isPose = false;
 		private Vector3 _dir;
 		private Rigidbody2D _rb;
 
@@ -21,7 +21,10 @@ namespace name
 
 		private void Update()
 		{
-			Move();
+			if (!_isPose)
+			{
+				Move();
+			}
 		}
 
 		
@@ -34,6 +37,16 @@ namespace name
 			_dir = new Vector3(_h, _v, 0).normalized * _moveSpeed;
 
 			_rb.velocity = _dir;
+		}
+
+		public void InPose()
+		{
+			_isPose = true;
+		}
+
+		public void OutPose()
+		{
+			_isPose = false;
 		}
 	}
 }
