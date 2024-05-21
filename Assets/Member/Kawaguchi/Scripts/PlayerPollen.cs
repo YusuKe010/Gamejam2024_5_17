@@ -35,18 +35,35 @@ public class PlayerPollen : MonoBehaviour, IDamageable, IPose
 		}
 	}
 
+	/// <summary>
+	/// 大きさを変える
+	/// </summary>
 	void ChangeScale()
 	{
 		transform.localScale = _initiateScale * (_currentHp / _initiateHp);
 	}
 
-	public void AddDamage(float damage)
+
+    /// <summary>
+    /// ゲームオーバー時
+    /// </summary>
+    void GameOver()
+    {
+
+		SceneChanger.Instance.SceneChange("Result");
+    }
+
+    public void AddDamage(float damage)
 	{
 		if (_currentHp > 0)
 		{
 			_currentHp -= damage;
 			ChangeScale();
 		}
+		else
+		{
+			GameOver();
+        }
 	}
 
 	public void Kill()
@@ -54,8 +71,12 @@ public class PlayerPollen : MonoBehaviour, IDamageable, IPose
 		if (!_isPose)
 		{
 			_currentHp = 0;
-		}
+			SaveManage.Instance.Data.InfectionCount += 1;
+			SaveManage.Instance.Save(SaveManage.Instance.Data);
+			GameOver();
+        }
 	}
+
 
 	public void InPose()
 	{

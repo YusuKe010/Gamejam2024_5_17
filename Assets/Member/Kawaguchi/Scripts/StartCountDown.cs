@@ -26,6 +26,7 @@ public class StartCountDown : MonoBehaviour
 		StartCoroutine(CountDown());
 	}
 
+	//カウントダウン
 	IEnumerator CountDown()
 	{
 		_text.text = "3";

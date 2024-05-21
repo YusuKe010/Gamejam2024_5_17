@@ -82,7 +82,9 @@ public class SaveData
 	///<summary>感染人数</summary>
 	public int InfectionCount;
 
-	public const int st = 6;
+	public const int st = 3;
 	///<summary>スコア</summary>
 	public float[] Score = new float[st];
+
+	public float CurrentScore;
 }
