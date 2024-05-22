@@ -362,7 +362,6 @@ GameObject:
   m_Component:
   - component: {fileID: 493097077}
   - component: {fileID: 493097076}
-  - component: {fileID: 493097075}
   m_Layer: 0
   m_Name: CD18D9DC-8763-46E5-ACB6-B9C7955AA781 (1)
   m_TagString: Untagged
@@ -370,19 +369,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &493097075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 493097074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 951c84792102ab8408a8aa0dbd10ecfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scrollSpeed: -2
 --- !u!212 &493097076
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -423,7 +409,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -100
   m_Sprite: {fileID: 21300000, guid: db49563b4dc9c47468fe80f8ace2b590, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -481,7 +467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 1275248107613950756, guid: 8096c3680d1cbcd40838e263e6ad865a, type: 3}
-  spawnInterval: 4
+  spawnInterval: 6
 --- !u!61 &586968340
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -552,7 +538,6 @@ GameObject:
   m_Component:
   - component: {fileID: 732384747}
   - component: {fileID: 732384746}
-  - component: {fileID: 732384745}
   m_Layer: 0
   m_Name: CD18D9DC-8763-46E5-ACB6-B9C7955AA781
   m_TagString: Untagged
@@ -560,19 +545,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &732384745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 732384744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 951c84792102ab8408a8aa0dbd10ecfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scrollSpeed: -2
 --- !u!212 &732384746
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -613,7 +585,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -100
   m_Sprite: {fileID: 21300000, guid: db49563b4dc9c47468fe80f8ace2b590, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1147,7 +1119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 9034835575048933560, guid: 5c5669658e982d848bc1a549f7302ef0, type: 3}
-  spawnInterval: 5
+  spawnInterval: 10
 --- !u!61 &1875581983
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1322,7 +1294,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4162458091556209668, guid: 8dc141088afea384780a880f13f55136, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4162458091556209668, guid: 8dc141088afea384780a880f13f55136, type: 3}
       propertyPath: m_SortingOrder
