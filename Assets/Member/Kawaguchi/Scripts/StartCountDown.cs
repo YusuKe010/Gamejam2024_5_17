@@ -9,15 +9,20 @@ public class StartCountDown : MonoBehaviour
 	[SerializeField] private Text _text;
 	private IEnumerator _enumerator;
 
-	private void Start()
+	private void Awake()
 	{
-		GameStart();
+		
 		foreach (var item in FindObjectsOfType<GameObject>()
 			         .Where(_ => _.GetComponent<IPose>() != null)
 			         .Select(_ => _.GetComponent<IPose>()).ToList())
 		{
 			item.InPose();
 		}
+	}
+
+	private void Start()
+	{
+		GameStart();
 	}
 
 	void GameStart()

@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/InGame.unity
+    guid: 0bcc15b467b47eb4fb06d5b57478f658
+  - enabled: 1
+    path: Assets/Member/okazawa/result.unity
+    guid: 1d76afd4340c9304394ae9d8ce2b3303
+  - enabled: 1
+    path: Assets/Member/okazawa/title.unity
+    guid: 6779043df56f3034197ad6ce31a661d4
   m_configObjects: {}
