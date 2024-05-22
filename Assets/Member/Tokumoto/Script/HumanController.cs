@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class HumanController : MonoBehaviour
 {
-    public float speed = 0.1f;
-    public float deleteTime = 10;
+    [SerializeField] float speed = 0.1f;
+    [SerializeField] float deleteTime = 10;
+
+    [SerializeField] float _speedUpRate;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +19,6 @@ public class HumanController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0f, -speed * 0.001f, 0f);
+        transform.Translate(0f, -speed * Time.deltaTime * (1 + _speedUpRate * LevelManager.Instance.Level), 0f);
     }
 }

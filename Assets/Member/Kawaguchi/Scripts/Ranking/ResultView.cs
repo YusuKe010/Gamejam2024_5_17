@@ -17,9 +17,8 @@ public class ResultView : MonoBehaviour
     //ランキング
     void Result()
     {
-
         _infectionText.text = $"本日の感染者{SaveManage.Instance.Data.InfectionCount.ToString()}人";
-        _currentScoreText.text = $"今回のスコア:{SaveManage.Instance.Data.CurrentScore}";
+        _currentScoreText.text = $"今回のスコア:{SaveManage.Instance.Data.CurrentScore}ステージ";
 
         for (int i = 0; i < numberOfPersons; i++)
         {
@@ -27,7 +26,7 @@ public class ResultView : MonoBehaviour
             {
                 var obj = new GameObject($"Cell{i}").AddComponent<Text>();
                 obj.transform.parent = this.transform;
-                obj.text = $"{i + 1}位:{SaveManage.Instance.Data.Score[i].ToString()}ポイント";
+                obj.text = $"{i + 1}位:{SaveManage.Instance.Data.Score[i].ToString()}ステージ";
 
                 TextSetting(obj);
             }
