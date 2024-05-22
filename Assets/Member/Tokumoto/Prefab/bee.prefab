@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93225e6c7d452c248adba149a6b6a00f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  moveRange: 5
+  speed: 3
+  moveRange: 4
   xmovespeed: 5
   nowPosi: 0
   deleteTime: 10
