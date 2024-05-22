@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Goal : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class Goal : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             LevelManager.Instance.LevelUp(1);
+            ScoreManager.Instance.ScoreUp(1);
+            ScoreManager.Instance.Clear();
             SceneChanger.Instance.SceneChange("InGame");
         }
     }

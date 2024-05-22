@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   deleteTime: 30
+  _speedUpRate: 0
 --- !u!58 &986220415099444736
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -149,4 +150,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyType: 0
-  _atk: 1
+  _atk: 0

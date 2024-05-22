@@ -23,6 +23,7 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+
     /// <summary>
     /// スコアアップして、セーブする
     /// </summary>
@@ -32,5 +33,11 @@ public class ScoreManager : MonoBehaviour
         _totalScore += score;
         SaveManage.Instance.Data.CurrentScore = _totalScore;
         SaveManage.Instance.Save(SaveManage.Instance.Data);
+    }
+
+
+    public void Clear()
+    {
+        SaveManage.Instance.Data.InfectionCount += 1;
     }
 }

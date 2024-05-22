@@ -5,10 +5,12 @@ public class BackGround : MonoBehaviour, IPose
     float scrollSpeed = -1;
     [SerializeField] float _speedUpLate;
     [SerializeField, Header("ƒS[ƒ‹")] GameObject _goalObj;
-    [SerializeField, Header("ƒS[ƒ‹‚Ü‚Å‚Ì‹——£")] float _goalDistance = 10;
+    [SerializeField, Header("ƒS[ƒ‹‚Ü‚Å‚Ì‹——£")] float _goalDistance = 1000;
+    [SerializeField] Transform _goalTransform;
     Vector3 cameraRectMin;
 
     bool _isPose;
+    bool _isGoal;
 
     float _distance = 0;
 
@@ -16,6 +18,8 @@ public class BackGround : MonoBehaviour, IPose
     {
         //ƒJƒƒ‰‚Ì”ÍˆÍ‚ðŽæ“¾
         cameraRectMin = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, Camera.main.transform.position.z));
+        _distance = 0;
+        _isGoal = false;
     }
 
     void Update()
@@ -24,13 +28,14 @@ public class BackGround : MonoBehaviour, IPose
         {
             Move();
 
-            if (_goalDistance >= _distance && _goalObj != null)
+            if (_goalDistance <= _distance && _goalObj != null && !_isGoal)
             {
-                Instantiate(_goalObj, transform.position, transform.rotation);
+                Instantiate(_goalObj, _goalTransform.position, transform.rotation);
+                _isGoal = true;
             }
             else
             {
-                _distance += scrollSpeed * Time.deltaTime * (1 + _speedUpLate * LevelManager.Instance.Level);
+                _distance += -scrollSpeed * Time.deltaTime * (1 + _speedUpLate * LevelManager.Instance.Level);
             }
         }
     }

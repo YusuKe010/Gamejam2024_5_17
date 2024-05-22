@@ -28,9 +28,10 @@ public class SaveManage : MonoBehaviour
 		{
 			Destroy(gameObject);
 		}
-		
-		// パス名取得
-		_filepath = Application.dataPath + "/" + _fileName;       
+        _data.CurrentScore = 0;
+
+        // パス名取得
+        _filepath = Application.dataPath + "/" + _fileName;       
 
 		// ファイルがないとき、ファイル作成
 		if (!File.Exists(_filepath)) {

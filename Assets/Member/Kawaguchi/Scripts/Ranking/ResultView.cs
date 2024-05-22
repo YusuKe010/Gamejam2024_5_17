@@ -17,20 +17,20 @@ public class ResultView : MonoBehaviour
     //ランキング
     void Result()
     {
-        _infectionText.text = $"本日の感染者{SaveManage.Instance.Data.InfectionCount.ToString()}人";
-        _currentScoreText.text = $"今回のスコア:{SaveManage.Instance.Data.CurrentScore}ステージ";
+        _infectionText.text = $"{SaveManage.Instance.Data.InfectionCount.ToString()}ステージクリア";
+        _currentScoreText.text = $"今回の感染者:{SaveManage.Instance.Data.CurrentScore}人";
 
-        for (int i = 0; i < numberOfPersons; i++)
-        {
-            if (SaveManage.Instance.Data.Score[i] != 0)
-            {
-                var obj = new GameObject($"Cell{i}").AddComponent<Text>();
-                obj.transform.parent = this.transform;
-                obj.text = $"{i + 1}位:{SaveManage.Instance.Data.Score[i].ToString()}ステージ";
+        //for (int i = 0; i < numberOfPersons; i++)
+        //{
+        //    if (SaveManage.Instance.Data.Score[i] != 0)
+        //    {
+        //        var obj = new GameObject($"Cell{i}").AddComponent<Text>();
+        //        obj.transform.parent = this.transform;
+        //        obj.text = $"{i + 1}位:{SaveManage.Instance.Data.Score[i].ToString()}ステージ";
 
-                TextSetting(obj);
-            }
-        }
+        //        TextSetting(obj);
+        //    }
+        //}
     }
 
     //テキストの設定
@@ -41,5 +41,13 @@ public class ResultView : MonoBehaviour
         obj.alignment = TextAnchor.MiddleCenter;
         obj.horizontalOverflow = HorizontalWrapMode.Overflow;
         obj.verticalOverflow = VerticalWrapMode.Overflow;
+    }
+
+
+    public void ScoreReset()
+    {
+        SaveManage.Instance.Data.CurrentScore = 0;
+        SaveManage.Instance.Data.InfectionCount = 0;
+        SaveManage.Instance.Save(SaveManage.Instance.Data);
     }
 }
