@@ -10,7 +10,7 @@ public class Background : MonoBehaviour, IPose
     void Start()
     {
         //ƒJƒƒ‰‚Ì”ÍˆÍ‚ğæ“¾
-        cameraRectMin = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, Camera.main.transform.position.z));
+        cameraRectMin = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, Camera.main.transform.position.z + 10));
     }
     void Update()
     {
