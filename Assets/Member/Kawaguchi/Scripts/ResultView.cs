@@ -14,6 +14,7 @@ public class ResultView : MonoBehaviour
         Result();
     }
 
+    //ランキング
     void Result()
     {
 
@@ -33,6 +34,7 @@ public class ResultView : MonoBehaviour
         }
     }
 
+    //テキストの設定
     void TextSetting(Text obj)
     {
         obj.font = _font;

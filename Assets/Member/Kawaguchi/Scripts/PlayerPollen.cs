@@ -50,7 +50,7 @@ public class PlayerPollen : MonoBehaviour, IDamageable, IPose
     void GameOver()
     {
 
-		SceneChanger.Instance.SceneChange("Result");
+		SceneChanger.Instance.SceneChange("result");
     }
 
     public void AddDamage(float damage)
