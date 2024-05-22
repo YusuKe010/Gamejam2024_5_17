@@ -32,6 +32,11 @@ public class Timer : MonoBehaviour, IPose
             remaining = timeLimit - (int)time;
             //timerText‚ğXV‚µ‚Ä‚¢‚­
             timerText.text = $"‚Ì‚±‚è:{remaining.ToString("D3")}";
+
+            if(remaining <= 0)
+            {
+                SceneChanger.Instance.SceneChange("result");
+            }
         }
     }
 

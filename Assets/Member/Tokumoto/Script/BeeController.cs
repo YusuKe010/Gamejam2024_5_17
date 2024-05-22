@@ -11,6 +11,8 @@ public class BeeController : MonoBehaviour
 
     public float deleteTime = 10f;
 
+    [SerializeField] float _speedUpRate = 0.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,6 @@ public class BeeController : MonoBehaviour
     void Update()
     {
         transform.position = new Vector3(nowPosi + Mathf.PingPong(Time.time * xmovespeed, moveRange), transform.position.y, transform.position.z);
-        transform.Translate(0f, -speed * 0.001f, 0f);
+        transform.Translate(0f, -speed * Time.deltaTime * (1 + _speedUpRate * LevelManager.Instance.Level), 0f);
     }
 }
