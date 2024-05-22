@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Member/okazawa/title.unity
     guid: 6779043df56f3034197ad6ce31a661d4
+  - enabled: 0
+    path: Assets/Member/Shinchi/InGame.unity
+    guid: aa1ff15006405d749a2b12fce347ec28
   m_configObjects: {}
